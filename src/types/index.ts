@@ -1,12 +1,11 @@
-interface IData {
-    title: string,
-    hasLanguage: boolean,
-    language: string,
-    rateofChange: number,
-    rateofSuccess: number
+interface IForm {
+    to: string;
+    cc: string;
+    bcc: string;
+    subject: string;
+    body: string;
 }
 
-
 export type {
-    IData
+    IForm
 }
