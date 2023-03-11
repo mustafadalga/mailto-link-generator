@@ -36,13 +36,13 @@ function copyCode() {
           class="flex items-center justify-between gap-3 px-4 py-2.5 rounded-full	bg-black/75 min-w-0">
 
 
-        <p class="w-full text-white whitespace-nowrap overflow-hidden text-ellipsis text-sm font-medium">
+        <p class="w-full text-white whitespace-nowrap overflow-hidden text-ellipsis text-xs lg:text-sm font-medium">
           {{ code }}
         </p>
 
         <button
             @click="copyCode"
-            class="whitespace-nowrap bg-blue-500 rounded-full text-white text-sm lg:text-base px-2 py-1 w-32">
+            class="whitespace-nowrap bg-blue-500 rounded-full text-white text-xs lg:text-sm px-2 py-1 w-32">
 
           <span v-if="showAnimate">Copied!</span>
           <span v-else>Copy Code</span>

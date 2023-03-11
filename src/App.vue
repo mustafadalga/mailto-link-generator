@@ -26,21 +26,21 @@ const htmlCode = computed<string>(() => {
 </script>
 
 <template>
-  <div id="">
+  <div>
     <h1 class="px-6 py-5 text-center text-2xl	lg:text-3xl	font-medium">Mailto Link Generator</h1>
-    <div class="w-full max-w-5xl mx-auto mt-20 px-6">
+    <div class="w-full max-w-5xl mx-auto mt-10 px-6">
       <Form @input="form=$event"/>
     </div>
-    <div class="fixed bottom-6 inset-x-1/2	-translate-x-1/2 -translate-y-1/2 w-[calc(100%-3rem)] max-w-3xl grid gap-5">
-      <CopyCode v-if="showCopyCode"
-                title="Mailto link"
-                :code="mailTo"/>
-      <CopyCode v-if="showCopyCode"
-                title="HTML code"
-                :code="htmlCode"/>
-    </div>
+
   </div>
 
-
+  <div class="fixed bottom-6 inset-x-1/2	-translate-x-1/2 w-[calc(100%-3rem)] max-w-3xl grid gap-5">
+    <CopyCode v-if="showCopyCode"
+              title="Mailto link"
+              :code="mailTo"/>
+    <CopyCode v-if="showCopyCode"
+              title="HTML code"
+              :code="htmlCode"/>
+  </div>
   <GithubBadge/>
 </template>

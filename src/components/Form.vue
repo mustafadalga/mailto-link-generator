@@ -31,57 +31,57 @@ watch(() => form.value, () => {
     <div class="px-5 grid gap-2">
       <div class="flex items-center justify-between gap-2">
         <div class="flex items-center gap-2 w-full">
-          <label for="to" class="text-sm font-medium text-gray-500">To</label>
+          <label for="to" class="text-xs lg:text-sm font-medium text-gray-500">To</label>
           <input type="text"
                  v-model="form.to"
                  id="to"
-                 class="w-full px-2 py-1 outline-0"/>
+                 class="w-full px-2 py-1 outline-0 text-xs lg:text-sm"/>
         </div>
 
         <div class="flex gap-2">
           <button type="button"
                   @click="showCcInput=!showCcInput"
-                  class="text-sm font-medium text-gray-500 hover:underline transition-all">Cc
+                  class="text-xs lg:text-sm font-medium text-gray-500 hover:underline transition-all">Cc
           </button>
           <button type="button"
                   @click="showBccInput=!showBccInput"
-                  class="text-sm font-medium text-gray-500  hover:underline transition-all">Bcc
+                  class="text-xs lg:text-sm font-medium text-gray-500  hover:underline transition-all">Bcc
           </button>
         </div>
 
       </div>
 
       <div v-if="showCcInput" class="flex items-center gap-2">
-        <label for="cc" class="text-sm font-medium text-gray-500">Cc</label>
+        <label for="cc" class="text-xs lg:text-sm font-medium text-gray-500">Cc</label>
         <input type="text"
                v-model="form.cc"
                id="cc"
-               class="w-full px-2 py-1 outline-0"/>
+               class="w-full px-2 py-1 outline-0 text-xs lg:text-sm"/>
       </div>
 
       <div v-if="showBccInput" class="flex items-center gap-2">
-        <label for="bcc" class="text-sm font-medium text-gray-500">Bcc</label>
+        <label for="bcc" class="text-xs lg:text-sm font-medium text-gray-500">Bcc</label>
         <input type="text"
                v-model="form.bcc"
                id="bcc"
-               class="w-full px-2 py-1 outline-0"/>
+               class="w-full px-2 py-1 outline-0 text-xs lg:text-sm"/>
       </div>
 
       <div class="flex items-center gap-2">
-        <label for="subject" class="text-sm font-medium text-gray-500">Subject</label>
+        <label for="subject" class="text-xs lg:text-sm font-medium text-gray-500">Subject</label>
         <input type="text"
                v-model="form.subject"
                id="subject"
-               class="w-full px-2 py-1 outline-0"/>
+               class="w-full px-2 py-1 outline-0 text-xs lg:text-sm"/>
       </div>
     </div>
 
     <div class="grid gap-4 px-5 py-4  border-t border-solid border-gray-200">
-      <label for="body" class="text-sm font-medium text-gray-500">Body</label>
+      <label for="body" class="text-xs lg:text-sm font-medium text-gray-500">Body</label>
       <textarea id="body"
                 v-model="form.body"
                 type="text"
-                class="resize-none w-full h-48 pr-2 py-1 outline-0"></textarea>
+                class="resize-none w-full h-48 pr-2 py-1 outline-0 text-xs lg:text-sm"></textarea>
     </div>
   </div>
 </template>
